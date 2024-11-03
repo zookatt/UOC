@@ -1,0 +1,68 @@
+@font-face {
+  font-family: Apple;
+  src: url(./apple/FontsFree-Net-SFProText-Regular.ttf);
+}
+
+h1 {
+  font-family: Apple;
+}
+
+header {
+
+  background-color: #0d0d0d;
+}
+
+header nav {
+  max-width: 1200px;
+  margin: auto;
+  height: 50px;
+  overflow: hidden;
+}
+
+.list {
+  color: rgb(221, 221, 221);
+  font-family: Apple;
+  text-align: center;
+}
+
+li {
+  margin: auto 25px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-size: 230% 230%;
+  display: block;
+  background-position: -13px -11px;
+  background-repeat: no-repeat;
+}
+
+.apple {
+  background-image: url('./apple/img/globalnav_apple_image__cxwwnrj0urau_large.svg');
+}
+
+.search {
+  background-image: url('./apple/img/globalnav_search_image__fca9mfoh8a2q_large.svg');
+
+}
+
+.shop {
+  background-image: url('./apple/img/globalnav_bag_image__bmix8075eg4i_large.svg');
+}
+
+.headerTxt {
+  text-align: center;
+  vertical-align: top;
+  font-family: Apple;
+}
+
+.banner {
+  background: url('./apple/img/hero__dvsxv8smkkgi_largetall_2x.jpg');
+  min-height: 650px;
+  background-size: 1200px auto;
+  background-repeat: no-repeat;
+
+}
