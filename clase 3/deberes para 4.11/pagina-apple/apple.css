@@ -36,33 +36,31 @@ header nav {
 
 li {
   margin: auto 35px;
+  cursor: pointer;
 }
 
 
 .icon {
   background-repeat: no-repeat;
-
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  cursor: pointer;
 }
 
 .apple {
   background-image: url('./apple/img/icons8-mac-os-50.png');
-  width: 20px;
-  height: 20px;
-  background-size: 100%;
+
 }
 
 .search {
-  background-image: url('./apple/img/icons8-búsqueda-50.png');
-  width: 20px;
-  height: 20px;
-  background-size: 100%;
+  background-image: url('./apple/img/icons8-busqueda-50.png');
+
 }
 
 .shop {
   background-image: url('./apple/img/icons8-shopping-bag-50.png');
-  width: 20px;
-  height: 20px;
-  background-size: 100%;
+
 }
 
 /* Header text line styles */
@@ -83,19 +81,21 @@ main {
 }
 
 /* First banner styles */
-div.banner2 {
-  background-color: #0d0d0d;
+div.banner1 {
+  background-color: #131313;
 }
 
 .banner1 {
   background: url('./apple/img/hero__dvsxv8smkkgi_largetall_2x.jpg');
   background-repeat: no-repeat;
   height: 700px;
-  background-size: 100%;
+  background-size: 70%;
   color: aliceblue;
+  background-position: bottom;
   text-align: center;
   overflow: auto;
   font-family: Apple;
+  margin-bottom: 4px;
 }
 
 .banner1 .title {
@@ -135,13 +135,14 @@ div.banner2 {
 
   background: url('./apple/img/hero__dvsxv8smkkgi_largetall_2x0.jpg');
   background-repeat: no-repeat;
-  height: 500px;
-  background-size: 100%;
+  height: 700px;
+  background-size: 150%;
   background-position: bottom;
   color: rgb(6, 6, 6);
   text-align: center;
   overflow: auto;
   font-family: Apple;
+  margin-bottom: 20px;
 
 }
 
@@ -182,13 +183,14 @@ div.banner3 {
 
   background: url('./apple/img/hero__dvsxv8smkkgi_largetall_2x1.jpg');
   background-repeat: no-repeat;
-  height: 500px;
-  background-size: 100%;
+  height: 600px;
+  background-size: 150%;
   background-position: bottom;
   color: aliceblue;
   text-align: center;
   overflow: auto;
   font-family: Apple;
+
 
 }
 
@@ -223,42 +225,377 @@ div.banner3 {
 /* Grid */
 
 .container {
+  display: flex;
   flex-wrap: wrap;
-
+  width: 100%;
+  justify-content: space-between;
 }
+
+/* Child 1 */
 
 .child1 {
-  background-color: aqua;
-  width: 500px;
-  height: 500px;
+  background-color: #fafafa;
+  background: url('./apple/img/tile__cauwwcyyn9hy_large_2x1.jpg');
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: bottom;
+  width: 49%;
+  height: 580px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: center;
+  overflow: auto;
+  font-family: Apple;
+
 }
 
-.child2 {
-  background-color: rgb(46, 93, 186);
-  width: 50%;
-  height: 500px;
+.child1 .title {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  margin-top: 60px;
 }
+
+.child1 .p1 {
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.child1 .p2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.child1 .links {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.child1 a {
+  margin: 0px 20px 0px 20px;
+  text-decoration: none;
+  color: rgb(61, 61, 248);
+}
+
+/* Child 2 */
+.child2 {
+  background-color: #131218;
+  background: url('./apple/img/tile__cauwwcyyn9hy_large_2x0.jpg');
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: bottom;
+  width: 50%;
+  height: 580px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: auto;
+  font-family: Apple;
+
+}
+
+.child2 .title {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  margin-top: 60px;
+  color: aliceblue;
+}
+
+.child2 .p1 {
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: aliceblue;
+}
+
+.child2 .p2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: aliceblue;
+}
+
+.child2 .links {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.child2 a {
+  margin: 0px 20px 0px 20px;
+  text-decoration: none;
+  color: rgb(61, 61, 248);
+}
+
+/* Child 3 */
 
 .child3 {
-  background-color: rgb(154, 41, 177);
-  width: 50%;
-  height: 500px;
+  background-color: #fafafa;
+  background: url('./apple/img/tile__cauwwcyyn9hy_large_2x2.jpg');
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: bottom;
+  width: 49%;
+  height: 580px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: center;
+  overflow: auto;
+  font-family: Apple;
+
 }
+
+.child3 .title {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  margin-top: 60px;
+  color: aliceblue;
+}
+
+.child3 .p1 {
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: aliceblue;
+}
+
+.child3 .p2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: aliceblue;
+}
+
+.child3 .links {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.child3 a {
+  margin: 0px 20px 0px 20px;
+  text-decoration: none;
+  color: rgb(61, 61, 248);
+}
+
+/* Child 4 */
 
 .child4 {
-  background-color: rgb(0, 255, 38);
+  background-color: #fafafa;
+  background: url('./apple/img/tile__cauwwcyyn9hy_large_2x.jpg');
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: bottom;
   width: 50%;
-  height: 500px;
+  height: 580px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: auto;
+  font-family: Apple;
+
 }
+
+.child4 .title {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  margin-top: 60px;
+
+}
+
+.child4 .p1 {
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+.child4 .p2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+
+}
+
+.child4 .links {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.child4 a {
+  margin: 0px 20px 0px 20px;
+  text-decoration: none;
+  color: rgb(61, 61, 248);
+}
+
+/* Child 5 */
 
 .child5 {
-  background-color: rgb(255, 183, 0);
-  width: 50%;
-  height: 500px;
+  background-color: #fafafa;
+  background: url('./apple/img/rising_stars_large_2x.jpg');
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: bottom;
+  width: 49%;
+  height: 580px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  overflow: auto;
+  font-family: Apple;
+
 }
 
+.child5 .title {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  margin-top: 60px;
+  color: aliceblue;
+
+}
+
+.child5 .p1 {
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: aliceblue;
+}
+
+.child5 .p2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: aliceblue;
+}
+
+.child5 .links {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.child5 a {
+  margin: 0px 20px 0px 20px;
+  text-decoration: none;
+  color: rgb(61, 61, 248);
+}
+
+/* Child 6 */
+
 .child6 {
-  background-color: rgb(255, 0, 0);
+  background-color: #fafafa;
+  background: url('./apple/img/tile__cauwwcyyn9hy_large_2x3.jpg');
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: bottom;
   width: 50%;
-  height: 500px;
+  height: 580px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  overflow: auto;
+  font-family: Apple;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+
+.child6 .title {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  margin-top: 60px;
+  color: aliceblue;
+
+}
+
+.child6 .p1 {
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: aliceblue;
+}
+
+.child6 .p2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: aliceblue;
+}
+
+.child6 .links {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.child6 a {
+  margin: 0px 20px 0px 20px;
+  text-decoration: none;
+  color: rgb(61, 61, 248);
+}
+
+/* Second Container*/
+
+.container2 {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  color: #938d85;
+  font-family: Apple;
+  font-size: 0.9rem;
+  text-align: start
+}
+
+.paragraf {
+  overflow: auto;
+
+}
+
+.container3 {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  color: #000000;
+  font-family: Apple;
+  font-size: 0.9rem;
+  text-align: start
+}
+
+.container3 .line {
+  width: 100%;
+  height: 5px;
+  border-bottom: 0.5px solid black;
+}
+
+.container3 .columns {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  font-family: Apple;
+  text-align: start;
+
+}
+
+.container3 .title2 {
+  font-size: 0.7rem;
+}
+
+.container3 p,
+.p3,
+.p4 {
+  font-size: 0.7rem;
+}
+
+footer {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  color: #000000;
+  font-family: Apple;
+  font-size: 0.9rem;
+  text-align: start
+}
+
+.footerLinks a {
+  text-decoration: none;
+  margin-right: 0;
+  padding-right: 10px;
+  text-align: right;
+  border-right: 1px solid black;
+  height: 5px;
 }
