@@ -1,0 +1,16 @@
+.main {
+  background: url(./bg-2.jpg);
+  max-width: 1200px;
+  margin: auto;
+  width: 750px;
+  height: 571px;
+  display: flex;
+  gap: 10px;
+}
+
+.column {
+  height: 150px;
+  width: 450px;
+  justify-content: flex-start;
+  padding: 20px;
+}

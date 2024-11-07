@@ -1,0 +1,35 @@
+.container {
+  width: 900px;
+  height: 800px;
+  margin: auto;
+  display: flex;
+}
+
+.left {
+  width: 30%;
+  height: 100px;
+}
+
+.right {
+  width: 70%;
+  height: 450px;
+  border-left: 1px solid black;
+}
+
+.imagen {
+  border-bottom: 1px solid black;
+}
+
+ul li {
+  list-style: none;
+  padding: 2px;
+  text-align: start;
+}
+
+h1 {
+  margin: 20px;
+}
+
+.text {
+  margin: 20px;
+}

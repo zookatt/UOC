@@ -1,0 +1,59 @@
+@font-face {
+  font-family: Spans;
+  src: url('./FontsFree-Net-SFProText-Regular.ttf');
+}
+
+* {
+  background-color: rgb(182, 210, 243);
+  margin: 0;
+  font-family: Spans;
+}
+
+.container {
+  max-width: 1000px;
+  height: 300px;
+  margin: auto;
+}
+
+.container .title {
+  text-align: end;
+  font-size: 3rem;
+  margin: 10px;
+}
+
+.container .subtitle {
+  text-align: start;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.container p {
+  text-align: start;
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+.redColorFont {
+  color: brown;
+  font-weight: bold;
+}
+
+.whiteBg {
+  background-color: aliceblue;
+  font-weight: 100;
+  color: green;
+}
+
+.dataStyle {
+  display: inline;
+  font-weight: 100;
+  border-top: 1px solid brown;
+  border-bottom: 1px solid brown;
+  color: brown;
+}
+
+.blueBig {
+  font-size: 3rem;
+  font-style: italic;
+  color: blue;
+}
