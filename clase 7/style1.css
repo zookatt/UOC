@@ -1,0 +1,52 @@
+* {
+  margin: auto;
+}
+
+.container {
+  background-image: url('./panteon.jpg');
+  width: 722px;
+  height: 480px;
+  /* Estos propiedades son para definir comportamiento de elementos hijos,
+   que en este caso con los .col dentro del .container :*/
+  display: flex;
+  /* Aparecen en modo columnas*/
+  align-items: center;
+  /* Se alinean verticalmente*/
+  justify-content: center;
+  /* Se alinean al centro*/
+
+}
+
+/* Los estilos de cada elemento hijo. No afectan al padre!! */
+.col {
+  width: 60px;
+  overflow: auto;
+  /* Para hacer scroll*/
+  height: 170px;
+  margin: 45px;
+  margin-top: 150px;
+}
+
+
+/* Propuesta de solucion de Pablo
+    
+    .container {
+      background: url(https://pablomonteserin.com/wp-content/uploads/2020/06/panteon.jpg) red;
+      width: 722px;
+      height: 480px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      padding-top: 90px;
+      box-sizing: border-box;
+    }
+  
+    .col {
+      width: 60px;
+      background-color: yellow;
+      height: 180px;
+      border: 1px solid black;
+      overflow: auto;
+    } */
