@@ -1,0 +1,117 @@
+* {
+  margin: auto;
+  max-width: 900px;
+
+}
+
+body {
+  background-image: url(./bg.gif);
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  height: auto;
+}
+
+header {
+
+  height: 50px;
+  display: flex;
+  margin: 20px 0px 20px 0px;
+  ;
+}
+
+.logo {
+  width: 50%;
+
+  background-image: url(./VUIT.png);
+  background-repeat: no-repeat;
+  background-size: 23%;
+  background-position: 2%;
+  height: 50px;
+  align-items: start;
+}
+
+.nav {
+  width: 50%;
+  height: 50px;
+  align-items: end;
+  display: flex;
+  justify-content: end;
+  overflow: hidden;
+}
+
+.nav li {
+  list-style: none;
+  margin: 5px;
+  padding: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  vertical-align: middle;
+}
+
+.nav li:first-child {
+  background-color: brown;
+}
+
+.nav li:hover {
+  background-color: brown;
+
+}
+
+.img {
+  background-image: url(./imatge_slider1.jpg);
+  background-repeat: no-repeat;
+  height: 280px;
+  background-size: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+.cards {
+  display: flex;
+}
+
+h2 {
+
+  color: brown;
+  margin: 20px 5px 20px 0px;
+}
+
+.card {
+  width: 1/3;
+  margin: 20px;
+}
+
+.img2 {
+  background-image: url(./pantalles_vuit_app.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 98px;
+}
+
+.card p {
+  margin: 20px 5px 20px 0px;
+  text-align: justify;
+}
+
+footer {
+  display: flex;
+}
+
+footer div.text {
+  width: 50%;
+  justify-content: start;
+  margin: 20px;
+}
+
+
+footer .nav {
+  width: 50%;
+  justify-content: end;
+  margin: 0px;
+}
