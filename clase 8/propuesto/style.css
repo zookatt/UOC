@@ -40,6 +40,7 @@ nav {
 
 nav li {
     display: inline-block;
+
 }
 
 nav a {
@@ -128,6 +129,12 @@ footer {
         height: 79px;
     }
 
+    .promo {
+        width: 100%;
+        margin: 5px;
+
+    }
+
     nav ul {
         height: 45px;
     }
@@ -137,6 +144,14 @@ footer {
         font-size: 14px;
         color: red;
         padding: 10px;
+
+    }
+
+    .img_logo {
+        margin-top: 25px;
+        width: 35%;
+        height: 79px;
+        background-image: url('./img/logo_medium.png') no-repeat;
 
     }
 
@@ -187,6 +202,7 @@ footer {
         background-image: url('./img/logo_small.png');
         width: 40px;
         height: 32px;
+
     }
 
     .promo {
@@ -229,7 +245,7 @@ footer {
     }
 }
 
-
+/* EXTRA SMALL */
 @media (max-width:560px) {
 
     nav ul {
