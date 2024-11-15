@@ -51,7 +51,7 @@ if (10 == 10){
 }
 
 //2
-const nota=6;
+const nota=305;
 
 if(nota>5){
   console.log('Aprobado')
@@ -96,21 +96,18 @@ if(i>100){
 //4
 const n1 = 3;
 const n2 = 7;
-const op='/'; // cambiar a: *, + o /
+const op='+'; // cambiar a: '*', '+' o '/'
 
 
 if(op==='+'){
   console.log(n1+n2)
-}
-
+} 
 if(op==='-'){
   console.log(n1-n2)
 }
-
 if(op==='*'){
   console.log(n1*n2)
 }
-
-if(op==='/'){
+ if(op==='/'){
   console.log(n1/n2)
 }
