@@ -31,4 +31,4 @@ let random;
 do {// hace el codigo, osea ejecuta
     random = Math.random();
     console.log(random);
-} while (random > 0.5);//y luego comprueba
+} while (random > 0.5);//y luego comprueba ""
