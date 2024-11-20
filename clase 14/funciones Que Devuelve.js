@@ -182,12 +182,18 @@ console.log(res2)
 
 //15
 function xor(bool5,bool6){
-if (bool5===true && bool6===false || bool5===false && bool6===true){
-  return true;
+// if (bool5===true && bool6===false || bool5===false && bool6===true){
+//   return true;
+// }else{
+//   return false;
+// }
+
+if(bool5!==bool6 ){
+	 return true;
 }else{
   return false;
 }
 }
 
-const res3 = xor(true,true)
+const res3 = xor(true,false)
 console.log(res3)
