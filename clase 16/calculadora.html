@@ -1,0 +1,22 @@
+<script>
+
+  const n1 = Number(prompt('Introduce un número1'));
+  alert("Primer numero es " + n1)
+  const n2 = Number(prompt('Introduce un número2'));
+  alert("Segundo numero es " + n2)
+  const operador = prompt('Introduce un operador: +, -, *, /');
+  alert("Operador es " + operador)
+  let resultado;
+  if (operador === "+") {
+    resultado = `Resultado de suma ${n1} + ${n2} es:  ${n1 + n2}`
+  } else if (operador === "-") {
+    resultado = `Resultado de resta  ${n1} - ${n2} es: ${n1 - n2}`
+  } else if (operador === "*") {
+    resultado = `Resultado de multiplicacion ${n1} * ${n2} es: ${n1 * n2}`
+  } else if (operador === "/") {
+    resultado = `Resultado de division  ${n1} / ${n2} es: ${n1 / n2}`
+  } else {
+    resultado = 'Error'
+  }
+  alert(resultado)
+</script>

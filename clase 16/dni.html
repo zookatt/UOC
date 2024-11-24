@@ -1,0 +1,28 @@
+<script>
+  //64783723 Z
+  //01079437 R
+  const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+
+  let dni = prompt('Introduce tu DNI sin letra');
+  alert(`DNI es : ${dni}`)
+
+  const obtenerLetraDnI = (dni) => {
+    let result;
+
+    if (dni.length !== 8 || isNaN(dni)) { //if validacion incorrecta return null
+      return result = `Dni incorrecto`;
+    }
+
+    if (dni) {//if validacion correcta calcular letra
+      let resto = 0
+      resto = dni % 23
+      console.log(resto)
+      return result = letras.join('').charAt(resto)
+    }
+    alert(result)
+
+  }
+  let letra = obtenerLetraDnI(dni);
+  alert(`Letra es ${letra}`)
+  console.log(`Letra es ${letra}`)
+</script>
