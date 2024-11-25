@@ -1,5 +1,6 @@
-//forEach no devuelve nada
+//forEach no devuelve nada (es buscle for)
 //map devuelve nuevo array con los elementos modificados
+//map transforma los elementos, conservando la logtitud del array
 
 const arr1 =["Juan","Roberto", "Ernesto", "Miriam", "Laura"]
 

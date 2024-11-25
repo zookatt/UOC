@@ -1,0 +1,70 @@
+<script>
+    let characters;
+    let collectedCharacters = [];
+    let collectedCharacters2 = [];
+    // 1
+    const getWomansName = () => {
+        // const r = ...
+        // console.log('getWomansName(): ' , r);
+        const woman = characters.filter((character) => character.gender === 'female').map((character) => character.name)
+        console.log(woman)
+    }
+    // 2
+    const getSmallerPeople = () => {
+        const smallerPeople = characters.map((character) => character.height - 10)
+        console.log(smallerPeople)
+    }
+    // 3
+    const sumaDePeso = () => {
+        const sumaPeso = characters.reduce((acc, character) => acc + Number(character.mass), 0)
+        console.log(sumaPeso)
+    }
+    // 4
+    const mediaDeAltura = () => {
+        const mediaAltura = characters.reduce((acc, character) => acc + Number(character.height), 0) / characters.length
+        console.log(mediaAltura)
+    }
+    // 5
+    const collectByIndex = (index) => {
+        const byIndex = characters.find((character) => characters[index] === character)
+        console.log(byIndex)
+        collectedCharacters.push(byIndex)
+        console.log(collectedCharacters)
+    }
+    // 6
+    const collectByName = (characterName) => {
+        const byName = characters.find((character) => character.name === characterName)
+        collectedCharacters.push(byName)
+        console.log(collectedCharacters)
+    }
+
+    // 7
+    const removeByName = (characterName) => {
+        const removeName = collectedCharacters.find((character) => character.name !== characterName)
+        collectedCharacters.pop(removeName)
+        console.log(collectedCharacters)
+    }
+
+    // 8 
+    const getCharacterFilms = (characterName) => {
+        const characterFilms = characters.filter((character) => character.name === characterName)
+        console.log(characterFilms)
+
+    }
+    fetch('https://swapi.py4e.com/api/people')
+        .then(res => res.json())
+        .then(data => {
+            characters = data.results;
+            // Aquí ejecutaremos las llamadas a las funciones que definiremos más arriba
+
+            console.log(characters);
+            getWomansName();
+            getSmallerPeople();
+            sumaDePeso();
+            mediaDeAltura();
+            collectByIndex(0);// C-3PO
+            collectByName('Luke Skywalker');
+            removeByName('C-3PO')
+            getCharacterFilms('R2-D2');
+        });
+</script>
