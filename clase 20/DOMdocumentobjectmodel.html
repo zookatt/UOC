@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class='box' id='boxx' style="background-color: brown; height: 300px; width: 300px;"></div>
+  <button onclick="hacerCosas()">Pulsar</button>
+  <script>
+    const hacerCosas = () => {
+      const box = document.querySelector('.box') //<--- usar querySelector es mucho mas versatil
+      // const box = document.getElementById('boxx')
+      box.style.backgroundColor = 'blue'
+      box.style.color = 'white'
+      box.innerHTML = 'uyuyuyuyuyuyu'
+      alert(box.style.width)
+    }
+  </script>
+</body>
+
+</html>

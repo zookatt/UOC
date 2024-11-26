@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="nombre">Nombre del cliente:</div>
+  <input type="text" class="clientName">
+  <div class="material">Material de la caja:</div>
+
+  <select class="list">
+    <option value="plastico">Plastico</option>
+    <option value="carton">Carton</option>
+  </select>
+
+  <div class="dimensiones">Seleccione unas dimensiones para la caja:</div>
+  <div>
+    <div>
+      <input type="radio" name="rBtn" class="radiusBtn" value="diminutas"> Diminutas
+    </div>
+    <div>
+      <input type="radio" name="rBtn" class="radiusBtn" value="medianas"> Medianas
+    </div>
+    <div>
+      <input type="radio" name="rBtn" class="radiusBtn" value="grandes"> Grandes
+    </div>
+    <div class="comentarios">Comentarios:</div>
+    <textarea style="width: 300px; height: 100px;" value="text" class="peticion"></textarea>
+    <div>
+      <button class="btn" onclick="enviar()">Enviar</button>
+    </div>
+    <div class="result"></div>
+  </div>
+
+  <script>
+    const enviar = () => {
+      const name = document.querySelector(".clientName").value
+      console.log(name)
+      const material = document.querySelector(".list").value
+      console.log(material)
+      const value = document.querySelector('[name=rBtn]:checked').value;
+      console.log(value)
+      const message = document.querySelector(".peticion").value
+      console.log(message)
+      const res = document.querySelector(".result")
+
+      const result = `${name} ha pedido una caja de ${material} con unas dimensiones ${value}. ${message}`;
+      console.log(result)
+      res.innerHTML = result;
+    }
+  </script>
+</body>
+
+</html>

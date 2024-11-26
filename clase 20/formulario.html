@@ -1,0 +1,16 @@
+<input type="text" class="age" /> <button>Enviar</button>
+<output></output>
+
+<script>
+  const ageObject = document.querySelector(".age");
+  const hacerCosas = () => {
+    const age = ageObject.value;
+    if (age.indexOf("a") >= 0) {
+      ageObject.style.backgroundColor = "red";
+    } else {
+      ageObject.style.backgroundColor = "transparent";
+    }
+  };
+
+  ageObject.addEventListener("input", hacerCosas);
+</script>

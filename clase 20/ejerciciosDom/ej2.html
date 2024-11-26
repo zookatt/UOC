@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <span>Grados centigrados:</span><input type="number" class="C">
+  <div class="F">Grados fahrenheit:</div>
+  <button onclick="toFahrenheit()">Calculate</button>
+</body>
+<script>
+  const toFahrenheit = () => {
+    const c = document.querySelector(".C").value
+    const f = document.querySelector(".F");
+    console.log(c)
+    const fValue = c * 9 / 5 + 32
+    console.log(fValue)
+
+    f.innerHTML = fValue  //pintar el resultado
+  }
+</script>
+</body>
+
+</html>

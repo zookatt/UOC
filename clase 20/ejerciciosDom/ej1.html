@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <span>Euros:</span><input type="number" class="number">
+  <div class="dollar">Dollars:</div>
+  <button onclick="eurosToDollars()">Calculate</button>
+</body>
+<script>
+  const eurosToDollars = () => {
+    const euroValue = document.querySelector(".number").value
+    const dollarElement = document.querySelector(".dollar");
+    console.log(euroValue)
+    const dollar = euroValue * 2
+    console.log(dollar)
+
+    dollarElement.innerHTML = dollar //pintar el resultado
+  }
+</script>
+
+</html>

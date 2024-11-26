@@ -1,0 +1,17 @@
+Escribe tu nombre, por favor:
+<input type="text" id="campoNombre">
+<button type="button" id="btn">Enviar</button>
+<output></output>
+
+
+<script>
+  const saludar = () => {
+    const info = document.querySelector('#campoNombre').value;
+    document.querySelector('output').value = info;
+  }
+
+  document.querySelector('button').addEventListener('click', saludar);
+</script>
+
+<!-- en peticion sincrona cuando abandonas un sitio para ir al otro
+asincrona es cuando todo se manda toda informacion en una pagina <---- vamos a u sar ese -->
