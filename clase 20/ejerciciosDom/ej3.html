@@ -20,20 +20,22 @@
   <div class="dimensiones">Seleccione unas dimensiones para la caja:</div>
   <div>
     <div>
-      <input type="radio" name="rBtn" class="radiusBtn" value="diminutas"> Diminutas
+      <input type="radio" name="size" class="radiusBtn" value="diminutas"> Diminutas
     </div>
     <div>
-      <input type="radio" name="rBtn" class="radiusBtn" value="medianas"> Medianas
+      <input type="radio" name="size" class="radiusBtn" value="medianas"> Medianas
     </div>
     <div>
-      <input type="radio" name="rBtn" class="radiusBtn" value="grandes"> Grandes
+      <input type="radio" name="size" class="radiusBtn" value="grandes"> Grandes
     </div>
     <div class="comentarios">Comentarios:</div>
     <textarea style="width: 300px; height: 100px;" value="text" class="peticion"></textarea>
     <div>
-      <button class="btn" onclick="enviar()">Enviar</button>
+      <!-- <button class="btn" onclick="enviar()">Enviar</button> -->
+      <button>Enviar</button>
     </div>
     <div class="result"></div>
+
   </div>
 
   <script>
@@ -42,7 +44,7 @@
       console.log(name)
       const material = document.querySelector(".list").value
       console.log(material)
-      const value = document.querySelector('[name=rBtn]:checked').value;
+      const value = document.querySelector('[name=size]:checked').value;
       console.log(value)
       const message = document.querySelector(".peticion").value
       console.log(message)
@@ -52,6 +54,9 @@
       console.log(result)
       res.innerHTML = result;
     }
+
+    document.querySelector('button').addEventListener('click', enviar)//llamar a funcion de este modo es mas versatil
+
   </script>
 </body>
 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div>
+    <input type="number" class="number1" placeholder="n1">
+    <input type="number" class="number2" placeholder="n2">
+    <button onclick="sum()">+</button>
+    <button onclick="rest()">-</button>
+    <button onclick="multi()">*</button>
+    <button onclick="divide()">/</button>
+    <button onclick="calcular()">Calcular</button>
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    let op = ''
+    const sum = () => {
+      op = '+'
+      console.log(op)
+    }
+    const rest = () => {
+      op = '-'
+      console.log(op)
+    }
+    const multi = () => {
+      op = '*'
+      console.log(op)
+    }
+
+    const divide = () => {
+      op = '/'
+      console.log(op)
+    }
+
+    const calcular = () => {
+      const n1 = Number(document.querySelector(".number1").value)
+      console.log(n1)
+      const n2 = Number(document.querySelector(".number2").value)
+      console.log(n2)
+      let r = ''
+      if (op === '+') {
+        r = `Suma es: ${n1 + n2}`;
+      } else if (op === '-') {
+        r = `Resta es: ${n1 - n2}`;
+      } else if (op === '*') {
+        r = `Multiplicacion es: ${n1 * n2}`;
+      } else if (op === '/') {
+        r = n2 !== 0 ? `Division es: ${n1 / n2}` : 'Error: Division by zero';
+      } else {
+        r = 'Error: No operation selected';
+      }
+      document.querySelector('#resultado').innerHTML = r
+      console.log(r)
+    }
+  </script>
+</body>
+
+</html>
+
+
+<!-- <script>
+  const sum = () => {
+      const n1 = Number(document.querySelector(".number1").value)
+      console.log(n1)
+      const n2 = Number(document.querySelector(".number2").value)
+      console.log(n2)
+      let suma = n1 + n2
+      document.querySelector('#resultado').innerHTML = suma
+      console.log(suma)
+    }
+    const rest = () => {
+      const n1 = Number(document.querySelector(".number1").value)
+      console.log(n1)
+      const n2 = Number(document.querySelector(".number2").value)
+      console.log(n2)
+      let rest = n1 - n2
+      document.querySelector('#resultado').innerHTML = rest
+      console.log(rest)
+    }
+
+
+    const multi = () => {
+      const n1 = Number(document.querySelector(".number1").value)
+      console.log(n1)
+      const n2 = Number(document.querySelector(".number2").value)
+      console.log(n2)
+      let multi = n1 * n2
+      document.querySelector('#resultado').innerHTML = multi
+      console.log(multi)
+    }
+
+    const divide = () => {
+      const n1 = Number(document.querySelector(".number1").value)
+      console.log(n1)
+      const n2 = Number(document.querySelector(".number2").value)
+      console.log(n2)
+      let divi = n1 / n2
+      document.querySelector('#resultado').innerHTML = divi
+      console.log(divi)
+    }
+</script> -->

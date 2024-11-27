@@ -1,0 +1,27 @@
+<input type="radio" id="small" name="size" class="size" value="small" checked />
+<label for="small">Pequeño</label><br />
+
+<input type="radio" id="big" name="size" class="size" value="big" />
+<label for="big">Big</label><br />
+
+<select class="target">
+  <option value="-1">Seleccione una opción por favor</option>
+  <option value="tokyo">Tokyo</option>
+  <option value="osaka">Osaka</option>
+</select>
+
+<textarea id="description"></textarea>
+
+<button>Hacer cosas</button>
+
+<script>
+  const hacerCosas = () => {
+    const sizeValue = document.querySelector("[name=op]:checked'").value;
+    alert(sizeValue);
+    const targetValue = document.querySelector(".target").value;
+    alert(targetValue);
+    const descriptionValue = document.querySelector("#description").value;
+    alert(descriptionValue);
+  };
+  document.querySelector("button").addEventListener("click", hacerCosas);
+</script>

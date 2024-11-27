@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div>
+    <input type="number" class="number1" placeholder="n1">
+    <input type="number" class="number2" placeholder="n2">
+    <select class="target">
+      <option value="plus">+</option>
+      <option value="minus">-</option>
+      <option value="multi">*</option>
+      <option value="divide">/</option>
+    </select>
+    <button>Calcular</button>
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    const calculate = () => {
+      const n1 = Number(document.querySelector(".number1").value)
+      console.log(n1)
+      const n2 = Number(document.querySelector(".number2").value)
+      console.log(n2)
+      const operator = document.querySelector(".target").value
+      console.log(operator)
+      let r = ''
+      console.log(r)
+      switch (operator) {
+        case 'plus':
+          r = n1 + n2
+          break;
+        case 'minus':
+          r = n1 - n2
+          break;
+        case 'multi':
+          r = n1 * n2
+          break;
+        case 'divide':
+          r = n1 / n2
+          break;
+        default:
+          undefined
+          break;
+      }
+
+      document.querySelector('#resultado').innerHTML = r
+      console.log(r)
+    }
+    document.querySelector("button").addEventListener("click", calculate)
+  </script>
+</body>
+
+</html>

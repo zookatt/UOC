@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Calcular la letra del DNI con Javascript</h1>
+  <div>
+    <label for="dniInput">Introduce un DNI sin letra</label><input type="number" class="dniNumber">
+  </div>
+  <div style="margin-top: 20px; margin-bottom: 20px;">
+    <label for="dniOutput">La Letra del DNI es:</label>
+    <!-- <span class="letra"></span> -->
+    <input type="text" class="letra">
+    <div style="margin-top: 20px;"><button>Calcular</button></div>
+
+
+    <script>
+      //64783723 Z
+      //01079437 R
+      // formula:numeroDNI%23=numero corresponde a letra del array
+      const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+
+      const calcularLetra = () => {
+        const dni = Number(document.querySelector('.dniNumber').value)
+        console.log(dni)
+        const resto = dni % 23
+        console.log(resto)
+        letter = letras[resto]
+        console.log(letter)
+        document.querySelector(".letra").value = letter;
+      }
+      document.querySelector("button").addEventListener("click", calcularLetra)
+    </script>
+</body>
+
+</html>

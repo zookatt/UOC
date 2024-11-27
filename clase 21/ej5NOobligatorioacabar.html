@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio coste viaje</title>
+</head>
+
+<body>
+  <h1>Ejercicio coste viaje</h1>
+  <div>
+    <label>Introduzca el numero de noches</label>
+    <input type="number" class="nights">
+
+    <select class="target">
+      <option value="-1">Seleccione una opción por favor</option>
+      <option value="osaka">Oviedo</option>
+      <option value="tokyo">Tokyo</option>
+      <option value="madrid">Madrid</option>
+      <option value="barcelona">Barcelona</option>
+    </select>
+
+    <button>Calcular coste</button>
+  </div>
+  <div style="margin-top: 20px;">
+    <p><label for="hotel">Coste hotel:</label><input type="number" class="hotelPrice" style="margin-left: 30px;"></p>
+    <p><label for="trip">Coste viaje:</label><input type="number" class="tripPrice" style="margin-left: 30px;"></p>
+    <p><label for="car">Coste alquiler coche:</label><input type="number" class="carPrice" style="margin-left: 30px;">
+    </p>
+    <p><label for="total">Coste total:</label><input type="number" class="totalPrice" style="margin-left: 30px;"></p>
+  </div>
+
+
+  <script>
+
+
+
+
+    //funciones de ayuda:
+    //-No tienen contacto con el HTML.
+    //-Tienen parámetros de entrada.
+    //-Tienen return.
+
+    const calculateHotelCost = () => {
+
+    }
+
+    const calculateAirplaneCost = () => {
+
+    }
+
+    const calculateRentingCarCost = () => {
+
+    }
+
+
+
+    ///funcion general vinculada a html
+    const calculateCost = () => {
+      //definir variables de entrada aqui
+      const nights = document.querySelector('.nights').value
+      console.log(nights)
+      const destination = document.querySelector(".target").value
+      console.log(destination)
+      const hotel = document.querySelector('.hotelPrice').value
+      console.log(hotel)
+      const trip = document.querySelector('.tripPrice').value
+      console.log(trip)
+      const car = document.querySelector('.carPrice').value
+      console.log(car)
+      const total = document.querySelector('.totalPrice').value
+      console.log(total)
+
+    }
+
+    document.querySelector("button").addEventListener('click', calculateCost)
+  </script>
+</body>
+
+</html>
