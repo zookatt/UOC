@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div style="width: 200px; height: 200px; background-color: red;" class="red"></div>
+  <div style="width: 200px; height: 200px; background-color: yellow;" class="yellow">
+    <p></p>
+  </div>
+
+  <script>
+    document.querySelector('.red').addEventListener("mouseover", () => {//cuando haces el evento sobre cuadrado rojo
+      document.querySelector("p").innerHTML = "Has hecho mouse over sobre la capa 1";//sale el mensaje en cuadrado amarillo. es porque es un div y puede contener texto dentro. puse p dentro y tambien funciona
+    })
+  </script>
+</body>
+
+</html>

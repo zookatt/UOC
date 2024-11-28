@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>¿Cuáles de los siguientes lenguajes son orientados a objetos? <span class="correct1">Java</span>, VB6,
+    <span class="correct2">C++</span>,
+    <span class="correct3">C#</span>, Cobol
+  </div>
+  <button>Ver respuestas</button>
+
+  <script>
+    //no se puede pintar todos span a la vez, hay que asignar el class o id diferentes a cada uno y dar estilo por separado
+    document.querySelector('button').addEventListener('click', () => {
+      const span1 = document.querySelector(".correct1");
+      const span2 = document.querySelector(".correct2");
+      const span3 = document.querySelector(".correct3");
+      span1.style.backgroundColor = 'red';
+      span2.style.backgroundColor = 'red';
+      span3.style.backgroundColor = 'red';
+    })
+  </script>
+</body>
+
+</html>

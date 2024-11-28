@@ -1,0 +1,29 @@
+<!-- REPASAR -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" class="numberOfparagrafs">
+  <div class="textos"></div>
+
+  <script>
+    document.querySelector('.numberOfparagrafs').addEventListener('input', () => {// 'input' es uno de los eventos tipo 'click', 'mouseover', 'change(para selectores)'
+      const num = document.querySelector('.numberOfparagrafs').value//recoges valor del input
+      console.log(num)
+      let textos = ''//inicializas la suma de los textos
+      for (let i = 0; i < num; i++) {
+        textos += 'Cositas guays<br> '//con cada iteracion anades texto. Numero de iteraciones segun el numero introducido.
+      }
+      document.querySelector('.textos').innerHTML = textos
+    })
+  </script>
+</body>
+
+</html>

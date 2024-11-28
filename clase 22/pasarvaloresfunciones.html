@@ -1,0 +1,28 @@
+<input type="text" class="diasEstancia" />
+<input type="text" class="destino" />
+
+<button>Calcular</button>
+
+<script>
+  const calcularCosteHotel = (diasDeEstancia) => {
+    return 18;
+  };
+  const calcularCosteViaje = (diasEstancia, destino) => {
+    return 29;
+  };
+  const calcularCosteAlquilerCoche = (diasDeEstancia) => {
+    const resultado = 43
+    return resultado;
+  };
+
+  const calcularCoste = () => {
+    const dias = document.querySelector(".diasEstancia").value;
+    const destino = document.querySelector(".destino").value;
+    const v1 = calcularCosteHotel(dias);//recibe valor de funcion
+    const v2 = calcularCosteViaje(dias, destino);//recibe valor de funcion
+    const v3 = calcularCosteAlquilerCoche(dias);//recibe valor de funcion
+
+    const costeTotal = v1 + v2 + v3;//maneja estos valores para contar el resultado
+  };
+  document.querySelector("button").addEventListener("click", calcularCoste);
+</script>

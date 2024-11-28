@@ -10,12 +10,13 @@
 <body>
   <h1>Calcular la letra del DNI con Javascript</h1>
   <div>
-    <label for="dniInput">Introduce un DNI sin letra</label><input type="number" class="dniNumber">
+    <label for="dniInput">Introduce un DNI sin letra</label><input type="text" class="dniNumber">
   </div>
   <div style="margin-top: 20px; margin-bottom: 20px;">
     <label for="dniOutput">La Letra del DNI es:</label>
     <!-- <span class="letra"></span> -->
     <input type="text" class="letra">
+    <!-- input no tiene .innerHTML, tiene .value -->
     <div style="margin-top: 20px;"><button>Calcular</button></div>
 
 
@@ -26,13 +27,23 @@
       const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
 
       const calcularLetra = () => {
-        const dni = Number(document.querySelector('.dniNumber').value)
+        const dni = document.querySelector('.dniNumber').value
         console.log(dni)
-        const resto = dni % 23
-        console.log(resto)
-        letter = letras[resto]
-        console.log(letter)
-        document.querySelector(".letra").value = letter;
+        if (dni === isNaN) {
+          alert(`DNI no es un nummero`)
+        } else if (dni.length !== 8) {
+          alert(`DNI no tiene 8 digitos`)
+        } else if (!dni) {
+          alert('Hay otro error')
+        } else {
+          const resto = dni % 23
+          console.log(resto)
+          letter = letras[resto]
+          console.log(letter)
+          document.querySelector(".letra").value = letter;
+        }
+
+
       }
       document.querySelector("button").addEventListener("click", calcularLetra)
     </script>

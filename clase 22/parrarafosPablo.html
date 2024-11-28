@@ -1,0 +1,16 @@
+<input type="text" />
+<div></div>
+<script>
+  const input = document.querySelector("input");
+
+  input.addEventListener("input", () => {
+    const value = input.value;
+    let text = "";
+    for (let i = 0; i < value; i++) {
+      text = text + "<p>Hola buenas</p>";
+    }
+    const div = document.querySelector("div");
+    div.innerHTML = text;
+    div.style.backgroundColor = "pink";
+  });
+</script>

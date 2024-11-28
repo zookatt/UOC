@@ -1,0 +1,42 @@
+<!-- Solucion de Pablo: -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <form action="#">
+      <label for="dni-number">Introduce un DNI sin la letra: </label><input type="text" id="dni-number" /><br /><br />
+      <label for="letra">La letra del DNI es: </label><output type="text" id="dni-letra"></output><br /><br />
+      <button type="button" id="button">Calcular</button>
+    </form>
+  </div>
+  <script>
+    const calculate = (n) => {
+      if (n.length !== 8) {
+        console.log("111111111111111");
+        return "error";
+      } else {
+        console.log("2222222");
+        const letters = "TRWAGMYFPDXBNJZSQVHLCKE";
+        const r = n % 23;
+        letter = letters.charAt(r);
+        return letter;
+      }
+    };
+    document.querySelector("#button").addEventListener("click", () => {
+      const dni = document.querySelector("#dni-number").value;
+      const v = calculate(dni);
+      // alert(v);
+      document.querySelector("output").value = v;
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<input type="text" />
+<output></output>
+
+<button>Hacer Cosas</button>
+
+<script>
+  document.querySelector("button").addEventListener("click", () => {
+    const v = document.querySelector("input").value;
+    document.querySelector("output").value = v;
+  });
+</script>
+
+<!-- select, output, input --- tienen .value
+div, p, span, h1 --- tienen .innerHTML -->
