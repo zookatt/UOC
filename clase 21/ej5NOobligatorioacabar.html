@@ -15,7 +15,7 @@
 
     <select class="target">
       <option value="-1">Seleccione una opción por favor</option>
-      <option value="osaka">Oviedo</option>
+      <option value="oviedo">Oviedo</option>
       <option value="tokyo">Tokyo</option>
       <option value="madrid">Madrid</option>
       <option value="barcelona">Barcelona</option>
@@ -42,16 +42,42 @@
     //-Tienen parámetros de entrada.
     //-Tienen return.
 
-    const calculateHotelCost = () => {
+    const calculateHotelCost = (nights) => {
+      return nights * 140
+    }
+
+    const calculateAirplaneCost = (nights, destination) => {
+      //
+      // «Oviedo»: 15
+      // «Tokyo»: 700
+      // «Madrid»: 90
+      // «Barcelona»: 90
+
+      // hacer aquui si son mas de 3 noches hacer 10 % de descuento
+      let cost = 0;
+      if (destination === 'oviedo') {
+        cost = nights * 15
+      } else if (destination === 'tokyo') {
+        cost = nights * 700
+      } else if (destination === 'madrid') {
+        cost = nights * 90
+      } else if (destination === 'barcelona') {
+        cost = nights * 90
+      } else {
+        alert('destino erroneo')
+      }
+      return cost
 
     }
 
-    const calculateAirplaneCost = () => {
-
-    }
-
-    const calculateRentingCarCost = () => {
-
+    const calculateRentingCarCost = (nights) => {
+      //noche 40
+      let costCar = nights * 40; // Base cost
+      if (nights > 7) {
+        costCar = costCar - 50;
+      } else if (nights > 3)
+        costCar = costCar - 20;
+      return costCar;
     }
 
 
@@ -59,18 +85,27 @@
     ///funcion general vinculada a html
     const calculateCost = () => {
       //definir variables de entrada aqui
-      const nights = document.querySelector('.nights').value
+      const nights = Number(document.querySelector('.nights').value)
       console.log(nights)
-      const destination = document.querySelector(".target").value
+      const destination = document.querySelector('.target').value
       console.log(destination)
-      const hotel = document.querySelector('.hotelPrice').value
-      console.log(hotel)
-      const trip = document.querySelector('.tripPrice').value
-      console.log(trip)
-      const car = document.querySelector('.carPrice').value
-      console.log(car)
-      const total = document.querySelector('.totalPrice').value
-      console.log(total)
+
+
+      const hotelCost = calculateHotelCost(nights)
+      console.log(`Coste hotel ${hotelCost}`)
+      const airplaneCost = calculateAirplaneCost(nights, destination)
+      console.log(`Coste avion ${airplaneCost}`)
+      const carCost = calculateRentingCarCost(nights)
+      console.log(`coste coche ${carCost}`)
+
+      document.querySelector('.hotelPrice').value = hotelCost;
+      document.querySelector('.tripPrice').value = airplaneCost;
+      document.querySelector('.carPrice').value = carCost;
+      const total = hotelCost + airplaneCost + carCost
+      document.querySelector('.totalPrice').value = total;
+
+
+
 
     }
 
