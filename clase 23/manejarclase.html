@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red {
+      background: red;
+    }
+
+    .blue {
+      background: blue;
+    }
+
+    .box {
+      width: 300px;
+      height: 300px;
+      transition: 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box red"></div>
+  <button>Pulsar</button>
+  <script>
+    document.querySelector("button").addEventListener("click", () => {
+      const box = document.querySelector(".box");
+      //box.classList.add("blue")
+      //box.classList.toggle("blue")
+      box.classList.remove("red")
+    })
+  </script>
+</body>
+
+</html>

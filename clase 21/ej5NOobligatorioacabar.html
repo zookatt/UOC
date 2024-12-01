@@ -56,15 +56,19 @@
       // hacer aquui si son mas de 3 noches hacer 10 % de descuento
       let cost = 0;
       if (destination === 'oviedo') {
-        cost = nights * 15
+        cost = 15
       } else if (destination === 'tokyo') {
-        cost = nights * 700
+        cost = 700
       } else if (destination === 'madrid') {
-        cost = nights * 90
+        cost = 90
       } else if (destination === 'barcelona') {
-        cost = nights * 90
+        cost = 90
       } else {
         alert('destino erroneo')
+      }
+
+      if (nights >= 3) {
+        cost *= 0.9;
       }
       return cost
 
@@ -72,10 +76,10 @@
 
     const calculateRentingCarCost = (nights) => {
       //noche 40
-      let costCar = nights * 40; // Base cost
-      if (nights > 7) {
+      let costCar = nights * 40;
+      if (nights >= 7) {
         costCar = costCar - 50;
-      } else if (nights > 3)
+      } else if (nights >= 3)
         costCar = costCar - 20;
       return costCar;
     }
@@ -103,9 +107,6 @@
       document.querySelector('.carPrice').value = carCost;
       const total = hotelCost + airplaneCost + carCost
       document.querySelector('.totalPrice').value = total;
-
-
-
 
     }
 

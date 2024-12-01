@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <button>Pulsar</button>
+  </div>
+  <div>
+    <button>Pulsar</button>
+  </div>
+  <div>
+    <button>Pulsar</button>
+  </div>
+  <div>
+    <button>Pulsar</button>
+  </div>
+
+  <script>
+
+    document.querySelectorAll('button').forEach((button) => {
+      button.addEventListener("click", () => {
+        button.closest('div').style.background = 'red'
+      })
+    })
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<img src="./triste.png" id="imagen" />
+<script>
+  const imagen = document.querySelector('#imagen');
+  const cambiarImagen = () => {
+    imagen.setAttribute("src", "./feliz.png");
+  }
+  imagen.addEventListener('click', cambiarImagen);
+</script>

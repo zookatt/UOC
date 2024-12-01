@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="question1">
+    <div>¿Qué héroe es más fuerte?</div>
+    <input type="radio" id="batman" name="option1" value="incorrect" />
+    <label for="batman">Batman</label><br />
+    <input type="radio" id="superman" name="option1" value="correct" />
+    <label for="superman">Superman</label><br />
+  </div>
+
+  <div class="question2">
+    <div>¿En qué consiste el sentido arácnido de Spiderman?</div>
+    <input type="radio" id="spiderDetect" name="option2" value="incorrect" />
+    <label for="spiderDetect">Detectar arañas cerca</label><br />
+    <input type="radio" id="danger" name="option2" value="correct" />
+    <label for="danger">Detectar peligro</label><br />
+  </div>
+
+  <div class="question3">
+    <div>¿Cuál es el nombre verdadero de Spiderman?</div>
+    <input type="radio" id="bruce" name="option3" value="incorrect" />
+    <label for="bruce">Bruce Wayne</label><br />
+    <input type="radio" id="peter" name="option3" value="correct" />
+    <label for="peter">Peter Parker</label><br />
+  </div>
+
+  <button>Resultados</button>
+  <script>
+    const checkResults = () => {
+      document.querySelectorAll('input[type=radio]:checked').forEach((input) => {
+        const label = document.querySelector(`label[for=${input.id}]`);
+        if (input.value === 'correct') {
+          label.style.backgroundColor = 'green';
+        } else {
+          label.style.backgroundColor = 'red';
+        }
+      });
+    };
+
+    document.querySelector('button').addEventListener("click", checkResults)
+  </script>
+</body>
+
+</html>

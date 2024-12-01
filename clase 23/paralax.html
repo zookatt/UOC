@@ -1,0 +1,57 @@
+<style type="text/css">
+  body {
+    margin: 0;
+    background: url(https://pablomonteserin.com/res/javascript-es6/ex/parallax/img/pera.png) fixed;
+  }
+
+  .pinas_and_oranges {
+    position: fixed;
+    width: 100%;
+    height: 1800px;
+  }
+
+  #pinas {
+    background: url(https://pablomonteserin.com/res/javascript-es6/ex/parallax/img/pina.png) 100px 200px;
+  }
+
+  #oranges {
+    background: url(https://pablomonteserin.com/res/javascript-es6/ex/parallax/img/orange.png) 50px 200px;
+  }
+
+  #whiteLayer {
+    top: 500px;
+    background: white;
+  }
+
+  #greenLayer {
+    top: 2500px;
+    background: green;
+  }
+
+  .contentLayer {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+  }
+</style>
+<script type="text/javascript">
+  let pinas;//inicializamos variables como undefined, es buena practica
+  let oranges;//
+  function parallax() {//paralax hace modificar posision del top en funcion del scrolll
+    pinas.style.top = -(window.pageYOffset / 5) + "px";
+    oranges.style.top = -(window.pageYOffset / 2) + "px";
+  }
+  function start() {
+    pinas = document.querySelector("#pinas");
+    oranges = document.querySelector("#oranges");
+  }
+  window.addEventListener("scroll", parallax);//cada vez que muevo rueda de raton se ejejuta varias veces por segundo
+  window.addEventListener("load", start);
+
+  // uso de la libreria plugin ScrollMagic.js https://scrollmagic.io/
+</script>
+
+<div id="pinas" class="pinas_and_oranges"></div>
+<div id="oranges" class="pinas_and_oranges"></div>
+<div id="whiteLayer" class="contentLayer"></div>
+<div id="greenLayer" class="contentLayer"></div>

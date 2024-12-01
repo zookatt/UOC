@@ -1,0 +1,56 @@
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    border: 3px solid black;
+  }
+</style>
+
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+<script>
+  const hacerCosas = (position) => {
+    alert(position);
+  };
+
+  document.querySelectorAll(".box").forEach((box, index) => {
+    box.style.backgroundColor = "rgb(" + index * 10 + ",0,0)";
+  });
+</script>

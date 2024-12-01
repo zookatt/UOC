@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <img src="./PinguLinux_Ying_Yang.png" id="imagen" />
+  <script>
+
+    let imagen = document.querySelector('#imagen');
+    let cambioImagen = true;
+    imagen.addEventListener('click', () => {
+      cambioImagen = !cambioImagen;
+      if (cambioImagen) {
+        imagen.setAttribute("src", "./PinguLinux_Yoda.jpg");
+        //imagen.src = "./PinguLinux_Yoda.jpg" <---tambien se puede hacer asi
+      } else {
+        imagen.setAttribute("src", "./PinguLinux_Ying_Yang.png");
+      }
+
+    });
+  </script>
+</body>
+
+</html>

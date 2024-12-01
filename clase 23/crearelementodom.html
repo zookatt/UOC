@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const div_rojo = document.createElement('div');
+    div_rojo.setAttribute('id', 'div_rojo_id');
+    div_rojo.setAttribute('style', 'background:red; width:300px; height:300px');
+    div_rojo.classList.add('amor');
+    div_rojo.innerHTML = 'Contenido';
+    document.querySelector('#div_rojo_wrapper').appendChild(div_rojo);
+  </script>
+</body>
+
+</html>
