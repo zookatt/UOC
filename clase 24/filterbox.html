@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    .box {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+
+    .gray {
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#todos" class="todos">Todos</a>
+  <a href="#azul" class="azul">Azul</a>
+  <a href="#naranja" class="naranja">Naranja</a>
+  <a href="#gris" class="gris">Gris</a>
+  <div class="boxes">
+    <div class="box blue"></div>
+    <div class="box orange"></div>
+    <div class="box gray"></div>
+    <div class="box blue"></div>
+    <div class="box blue"></div>
+    <div class="box orange"></div>
+    <div class="box gray"></div>
+    <div class="box orange"></div>
+    <div class="box blue"></div>
+    <div class="box orange"></div>
+    <div class="box gray"></div>
+    <div class="box gray"></div>
+    <div class="box blue"></div>
+    <div class="box orange"></div>
+    <div class="box gray"></div>
+    <div class="box blue"></div>
+    <div class="box orange"></div>
+    <div class="box gray"></div>
+  </div>
+  <script>
+    const blueBoxFilter = () => {
+      document.querySelectorAll(".boxes").forEach((div) => {
+        box.classList.add('visible') = "none"
+      })
+    }
+    const orangeBoxFilter = () => {
+      alert('voy a filtrar solo boxes naranjas')
+    }
+    const grayBoxFilter = () => {
+      alert('voy a filtrar solo boxes grises')
+    }
+    const allBoxFilter = () => {
+      alert('voy a mostrar todos los boxes')
+    }
+    document.querySelector(".azul").addEventListener("click", blueBoxFilter)
+    document.querySelector(".naranja").addEventListener("click", orangeBoxFilter)
+    document.querySelector(".gris").addEventListener("click", grayBoxFilter)
+    document.querySelector(".todos").addEventListener("click", allBoxFilter)
+  </script>
+</body>
+
+</html>
