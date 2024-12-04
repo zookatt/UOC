@@ -1,0 +1,21 @@
+body {
+  background-color: gray;
+}
+
+.div {
+  background-color: rgb(65, 65, 109);
+  height: 60px;
+
+
+  p {
+    background-color: green;
+    height: 20px;
+    padding: 5px;
+  }
+
+  &:hover {
+    background-color: aqua;
+  }
+
+
+}
