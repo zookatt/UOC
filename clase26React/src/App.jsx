@@ -1,7 +1,5 @@
 // //
 
-import { useRef } from "react";
-
 // import { useRef } from "react";
 
 // const App = () => {
@@ -36,24 +34,44 @@ import { useRef } from "react";
 
 //useRef es equivalente a document.querySelector(), Pablo no lo usa, usa useState
 //en version 16 de React sacaron los hooks y quiter la OOP de react. permiten hacer cosas que se podian hacer antes con OOP hacer ahora con funciones
-import React from "react";
-import Ejercicio1 from "./Ejercicio1";
-import Ejercicio2 from "./ejercicio2";
-import Ejercicio3 from "./Ejercicio3";
-import Styles from "./Styles";
+//import Ejercicio1 from "./Ejercicio1";
+//import Ejercicio2 from "./Ejercicio2";
+//import Ejercicio3 from "./Ejercicio3";
+//import { Ejercicio4 } from "./Ejercicio4";
+//import UseState from "./UseState";
+
+//import { ComponentA } from "./components/ComponentA";
+//import { ComponentB } from "./components/ComponentB";
+//import { ComponentC } from "./components/ComponentC";
+import Book from "./components/Book";
+import books from "./data/books.json";
 const App = () => {
   return (
-    <>
-      <div>Ejercicios:</div>
-      <h2>Euros a dólares</h2>
-      <Ejercicio1 />
-      <h2>Grados centígrados</h2>
-      <Ejercicio2 />
-      <h2>Calcular la superficie de un rectángulo</h2>
-      <Ejercicio3 />
-      <Styles />
-    </>
+    <div>
+      {books.map((b) => (
+        <Book book={b} />
+      ))}
+    </div>
   );
 };
 
 export default App;
+{
+  /* <div>Ejercicios:</div>
+      <h2>Euros a dólares</h2>
+      <Ejercicio1 />
+      <h2>Grados centígrados</h2>
+      <Ejercicio2 />
+      <h2>Calcular la superficie de un rectángulo</h2>*/
+}
+{
+  /* <Ejercicio3 /> */
+}
+{
+  /* <Ejercicio4 /> */
+}
+{
+  /* <ComponentA amor="te quiero" />
+      <ComponentB>{children}</ComponentB>
+      <ComponentC /> */
+}
