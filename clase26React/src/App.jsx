@@ -49,6 +49,7 @@ const App = () => {
   return (
     <div>
       {books.map((b) => (
+        // eslint-disable-next-line react/jsx-key
         <Book book={b} />
       ))}
     </div>
